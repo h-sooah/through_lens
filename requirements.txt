@@ -1,4 +1,4 @@
-admin-multiupload==1.10
+
 aioredis==1.2.0
 altgraph==0.16.1
 asgiref==2.3.2
