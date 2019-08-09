@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+
+@font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body {
+    font-family: 'KOMACON';
+}
+
+.logo {
+    z-index: 1;
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    width: 7%;
+}
+
+
+.title {
+    z-index: 1;
+    position: absolute;
+    display: inline;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 1%;
+}
+
+.title > p {
+    position: relative;
+    text-align: center;
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.title > p > a {
+    color: rgb(77,139,124);
+}
+
+
+
+.category {
+    z-index: 2;
+    top: 3%;
+    left: 75%;
+    position: absolute;
+    display: inline;
+}
+
+.category > a {
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.profileupdate_form-zero{
+    position: absolute;
+    width: 100%;
+    top: 20%;
+
+}
+
+
+
+
+
+.red-zero{
+    width: 100%;
+    position: absolute;
+    top: 36%;
+    left: 79%;
+    right: 2%;
+}
+
+
+.red > .col-xs-6 {
+    z-index: 1;
+    position: relative;
+    top: 45%;
+    right: 3%;
+    border-radius: 143px;
+    text-align:center;
+margin:0;
+    padding: 0;
+    width: 215px;
+    height: 215px;
+}
+
+.green2-zero{
+    width: 100%;
+    position: absolute;
+    top: 32%;
+}
+
+
+.green2 {
+    position: relative;
+    top: 37%;
+    left: 10%;
+    width: 60%;
+    min-height: 50em;
+    background-color: rgb(77,139,124);
+
+}
+
+.green2 > h3{
+    color: yellow;
+    padding: 3% 3% 3% 3%;
+}
+
+
+
+
+.yellow-zero{
+    position: absolute;
+    width: 100%;
+    height:32%;
+    top: 20%;
+}
+.yellow {
+    position: relative;
+    width: 16%;
+    height: 85%;
+    left: 58%;
+    background-color: rgb(249,192,69);
+    z-index: 4;
+    text-align: center;
+    line-height: 15px;
+
+}
+
+.yellow-zero > .yellow > h1 {
+    position: relative;
+    padding: 32% 2% 0 2%;
+
+}
+
+
+.yellow2-zero{
+    position:absolute;
+    top:71%;
+    width: 100%;
+    height: 27%;
+}
+
+
+.yellow2 > .col-xs-6{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(249,192,69);
+    margin-top: 3%;
+    left: 70%;
+}
+
+.white-zero {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+}
+
+
+.white{
+    position: relative;
+    left: 50%;
+    width: 70%;
+}
+
+.sixth {
+  border-radius: 4px;
+  border-color: rgb(77,139,124);
+    color: rgb(77,139,124);
+    font-size: 1.3em;
+    font-family: 'Lacquer', sans-serif;
+    background-color: white;
+}

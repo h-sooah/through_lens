@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+@font-face { font-family: 'KOMACON'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/KOMACON.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'KOMACON';
+}
+
+
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 7%;
+}
+
+.title {
+    position: absolute;
+    display: inline;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 1%;
+}
+
+.title > a {
+    position: relative;
+    text-decoration: none;
+    padding-left: 45%;
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#title_p {
+    text-align: center;
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.category {
+    z-index: 2;
+    top: 3%;
+    left: 75%;
+    position: absolute;
+    display: inline;
+}
+
+.category > a {
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 1.2em;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+#user_name {
+    font-family: 'Alfa Slab One', cursive;
+    color: rgb(68,173,219);
+}
+
+/* base */
+
+.a {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 20%;
+    display: flex;
+}
+
+.keywords {
+    margin: 2% 0 0 0 ;
+    padding: 0;
+    position: relative;
+    left: 10%;
+    width: 80%;
+    display: inline;
+}
+
+.inline {
+    display: inline;
+    margin-right: 5%;
+
+}
+
+.keywords_title {
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.cute {
+    color: white;
+    font-size: 1.1em;
+    background-color: darkorange;
+    border: darkorange 2px solid;
+    border-radius: 4px;
+    font-family: 'KOMACON';
+}
+
+.cool {
+    color: white;
+    font-size: 1.1em;
+    background-color: rgb(253,79,91);
+    border: rgb(253,79,91) 2px solid;
+    border-radius: 4px;
+    font-family: 'KOMACON';
+}
+
+.mono {
+    color: white;
+    font-size: 1.1em;
+    background-color: black;
+    border: black 2px solid;
+    border-radius: 4px;
+    font-family: 'KOMACON';
+}
+
+.plus {
+    color: white;
+    font-size: 1.1em;
+    background-color: rgb(77,139,124);
+    border: rgb(77,139,124) 2px solid;
+    border-radius: 4px;
+    font-family: 'KOMACON';
+}
+
+.upload_post {
+    border: rgb(77,139,124) 2px solid;
+    font-family: 'Lacquer', sans-serif;
+    color: rgb(77,139,124);
+    font-size: 1.3em;
+    background-color: white;
+    margin-left: 35%;
+}
+
+.paginator {
+    position: absolute;
+    top: 22.3%;
+    right: 10%;
+}
+
+.paginator > a {
+    color: rgb(68,173,219);
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.paginator > span {
+    color: rgb(77,139,124);
+    font-size: 2em;
+}
+
+/* base_block */
+
+.b {
+    position: absolute;
+    width: 100%;
+    top:35%;
+}
+
+.array {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.card {
+    margin: auto;
+    display: block;
+    width: 24%;
+    height: 82%;
+
+}
+
+.array > .card {
+    background-color: white;
+    border-radius: 4px;
+}
+
+
+.box-1 > a > img {
+    position: relative;
+    width:100%;
+    padding: 0;
+    border-radius: 4px;
+}
+
+
+.box-2{
+    position: relative;
+    background-color: white;
+    width:96%;
+    height: 20%;
+    margin: 0 2%;
+    padding: 0;
+}
+
+.c {
+    font-size: 1.2em;
+    color: rgb(77,139,124);
+    margin-bottom: 0;
+}
+
+.d {
+    font-size: 1em;
+    font-family: 'Alfa Slab One', cursive;
+    color: rgb(68,173,219);
+    margin-top: 0.2em;
+}
+
+/* post */
+
+.e {
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.post {
+    width: 50%;
+    margin-left: 30%;
+}
+
+.form-post {
+    color: rgb(77,139,124);
+    font-family: 'Lacquer', sans-serif;
+}
+
+.post_button {
+    float: right;
+    margin-right: 20%;
+    color: rgb(77,139,124);
+    font-family: 'Lacquer', sans-serif;
+    background-color: white;
+    border: rgb(77,139,124) 2px solid;
+    font-size: 1.2em;
+}
+
+/* detail */
+
+.f {
+    position: absolute;
+    top: 30%;
+    width: 70%;
+    min-height: 70%;
+    background-color: rgb(77,139,124);
+}
+
+.detail {
+    margin: 5% 15%;
+}
+
+.detail > p {
+    color: rgb(249,192,69);
+}
+
+.detail_title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.detail_username {
+    font-size: 1em;
+}
+
+.detail_content {
+    font-size: 1.2em;
+    margin-top: 5%;
+}
+
+.g {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 30%;
+    min-height: 70%;
+}
+
+.detail_back > a > button {
+    color: rgb(77,139,124);
+    border: rgb(77,139,124) 2px solid;
+    background-color: white;
+    font-family: 'Lacquer', sans-serif;
+    font-size: 1.3em;
+    margin: 10% 0 0 20%;
+}
+
+.detail_active > a > button {
+    color: rgb(77,139,124);
+    border: rgb(77,139,124) 2px solid;
+    background-color: white;
+    font-family: 'Lacquer', sans-serif;
+    font-size: 1.3em;
+    margin: 10% 0 0 20%;
+    display: block;
+}
+
+.sixth {
+  border-color: rgb(77,139,124);
+    color: rgb(77,139,124);
+    font-size: 1.3em;
+    font-family: 'Lacquer', sans-serif;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.container {
+    color: rgb(77,139,124);
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    font-family: 'Lacquer', sans-serif;
+}

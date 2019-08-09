@@ -1,0 +1,33 @@
+{% extends 'model/model_base.html' %}
+{% block content %}
+
+
+       <div class="b">
+         <div class="array">
+                {% for plus in plus_posts %}
+                        <div class="card">
+                            <div class="box-1">
+                                <img src="{{ plus.image1.url  }}" width="200" height="250">
+                            </div>
+                            <div class="box-2">
+                                <p class="c">{{ plus.title }}</p>
+                                <p class="d">{{ user.username }}</p>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+       </div>
+
+    <div class="paginator">
+        {% if plus_posts.has_previous %}
+          <a href="?page={{ plus_posts.previous_page_number }}">◀</a>
+        {% else %}
+          <span>◀</span>
+        {% endif %}
+        {% if plus_posts.has_next %}
+          <a href="?page={{ plus_posts.next_page_number }}">▶</a>
+        {% else %}
+          <span>▶</span>
+        {% endif %}
+    </div>
+{% endblock content %}

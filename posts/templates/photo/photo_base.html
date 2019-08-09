@@ -1,0 +1,58 @@
+
+<head>
+    {% load  staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/model_photo.css' %}">
+</head>
+<body>
+
+    <a href="{% url 'index' %}">
+        <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+    </a>
+    <div class="title">
+        <a href="{% url 'photo' %}">photographer</a>
+    </div>
+    <div class="category">
+        {% if user.is_authenticated %}
+            <a id="user_name" href="{% url 'profile' user.pk %}">{{ user.username }}</a>
+            <a href="{% url 'logout' %}">logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">login</a>
+            <a href="{% url 'signup' %}">registration</a>
+        {% endif %}
+    </div>
+    <div class="a">
+        <div class="keywords">
+            <div class="inline">
+                <a class="keywords_title" href="">keywords</a>
+            </div>
+            <div class="inline">
+                <a href="{% url 'photo_filter_cute' %}"><button class="cute">큐티</button></a>
+                <a href="{% url 'photo_filter_cool' %}"><button class="cool">청량</button></a>
+                <a href="{% url 'photo_filter_bnw' %}"><button class="mono">흑백</button></a>
+                <a href="{% url 'photo_filter_plus' %}"><button class="plus">플러스모델</button></a>
+            </div>
+            <div class="inline">
+                {% if user.is_photographer == True %}
+                <a href="{% url 'photo_post' %}"><button class="upload_post">upload</button></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="paginator">
+        {% if is_paginated %}
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">◀</a>
+            {% else %}
+            <span>◀</span>
+            {% endif %}
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">▶</a>
+            {% else %}
+                <span>▶</span>
+            {% endif %}
+        {% endif %}
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+

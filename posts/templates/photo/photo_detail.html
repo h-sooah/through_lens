@@ -1,0 +1,57 @@
+
+<head>
+    {% load  staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/model_photo.css' %}">
+</head>
+<body>
+    <a href="{% url 'index' %}">
+        <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+    </a>
+    <div class="title">
+        <p><a href="{% url 'photo' %}">photographer</a></p>
+    </div>
+    <div class="category">
+        {% if user.is_authenticated %}
+            <a id="user_name" href="{% url 'profile' user.pk %}">{{ user.username }}</a>
+            <a href="{% url 'logout' %}">logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">login</a>
+            <a href="{% url 'signup' %}">registration</a>
+        {% endif %}
+    </div>
+    <div class="f">
+        <div class="detail">
+            <p class="detail_title">{{ photo_post_detail.title }}</p>
+            <p class="detail_username">{{ user.username }}</p>
+            {% if photo_post_detail.image1 != '' %}
+                <img src="{{ photo_post_detail.image1.url }}" width = "220" alt = "{{ photo_post_detail.title }}">
+            {% endif %}
+            {% if photo_post_detail.image2 != '' %}
+                <img src="{{ photo_post_detail.image2.url }}" width = "220" alt = "{{ photo_post_detail.title }}">
+            {% endif %}
+            {% if photo_post_detail.image3 != '' %}
+                <img src="{{ photo_post_detail.image3.url }}" width = "220" alt = "{{ photo_post_detail.title }}">
+            {% endif %}
+            {% if photo_post_detail.image4 != '' %}
+                <img src="{{ photo_post_detail.image4.url }}" width = "220" alt = "{{ photo_post_detail.title }}">
+            {% endif %}
+            {% if photo_post_detail.image5 != '' %}
+                <img src="{{ photo_post_detail.image5.url }}" width = "220" alt = "{{ photo_post_detail.title }}">
+            {% endif %}
+            <p class="detail_content">{{ photo_post_detail.text }}</p>
+        </div>
+    </div>
+    <div class="g">
+        <div class="detail_back">
+            <a href="{% url 'photo' %}"><button>back-photographer</button></a>
+        </div>
+        <div class="detail_active">
+            {% if user.role == '사진작가' %}
+                <a href="{% url 'photo_edit' photo_post_detail.id %}"><button>edit</button></a>
+                <a href="{% url 'photo_delete' photo_post_detail.id %}"><button>delete</button></a>
+            {% endif %}
+        </div>
+    </div>
+
+
+</body>

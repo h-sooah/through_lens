@@ -1,0 +1,33 @@
+<head>
+    {% load  staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/model_photo.css' %}">
+</head>
+<body>
+    <a href="{% url 'index' %}">
+        <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+    </a>
+    <div class="title">
+        <p>revise your photos!</p>
+    </div>
+    <div class="category">
+        {% if user.is_authenticated %}
+            <a id="user_name" href="{% url 'profile' user.pk %}">{{ user.username }}</a>
+            <a href="{% url 'logout' %}">logout</a>
+        {% else %}
+            <a href="{% url 'login' %}">login</a>
+            <a href="{% url 'signup' %}">registration</a>
+        {% endif %}
+    </div>
+    <div class="container">
+        <h1>수정 페이지</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <br>
+            <button type="submit" class="sixth">submit</button>
+        </form>
+    </div>
+</body>
+

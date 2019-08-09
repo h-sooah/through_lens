@@ -1,0 +1,41 @@
+<head>
+    {% load  staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/user_profile.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+<a href="{% url 'index' %}">
+    <img class="logo" src="{% static 'image/logo.png' %}" alt="logo"></a>
+<div class="title">
+    <p>edit my profile</p>
+</div> <div class="category">
+    <a href="{% url 'logout' %}">logout</a>
+    <a href="{% url 'profile' user.pk %}">mypage</a>
+</div>
+<center>
+    <div class="profileupdate_form-zero">
+        <div class="profileupdapte_form">
+            <h1>{{user.name}}</h1>
+            {% if error_msg %}
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="sixth" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>Error</strong> {{error_msg}}
+                </div>
+            {% endif %}
+            <form action="" method="post" enctype="multipart/form-data" class="">
+                {% csrf_token %}
+                {{ user_form.as_p }}
+                {{ profile_form.as_p }}
+                <input type="submit" value="Update" class="sixth"/>
+                <a href="{% url 'password_change' %}">
+                    <button class="sixth">비밀번호 변경</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</center>
+</body>

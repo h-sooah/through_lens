@@ -1,0 +1,37 @@
+{% extends 'photo/photo_base.html' %}
+{% block content %}
+
+
+            <div class="b">
+                <div class="array">
+                {% for pluss in photo_plus_posts %}
+                        <div class="card">
+                            <div class="box-1">
+                                <img src="{{ pluss.image1.url  }}" width="200" height="250" alt = "{{ pluss.title }}">
+                            </div>
+                            <div class="box-2">
+                                <p class="c">{{ pluss.title }}</p>
+                                <p class="d">{{ user.username }}</p>
+                            </div>
+                        </div>
+                {% endfor %}
+            </div>
+            </div>
+
+<div class="paginator">
+    {% if photo_plus_posts.has_previous %}
+      <a href="?page={{ photo_plus_posts.previous_page_number }}">◀</a>
+    {% else %}
+        <span>◀</span>
+  {% endif %}
+    {% if photo_plus_posts.has_next %}
+      <a href="?page={{ photo_plus_posts.next_page_number }}">▶</a>
+    {% else %}
+      <span>▶</span>
+    {% endif %}
+</div>
+
+
+
+
+{% endblock content %}
